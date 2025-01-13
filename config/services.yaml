@@ -20,11 +20,11 @@ services:
             - '../src/Entity/'
             - '../src/Kernel.php'
 
-    App\Service\RssImporterService:
+    App\Services\RssImporterService:
         arguments:
             $entityManager: '@doctrine.orm.entity_manager'
-    App\Service\RssMapper: ~
-    App\Interfaces\RssMapperInterface: '@App\Service\RssMapper'
+    App\Mapper\RssMapper: ~
+    App\Interfaces\RssMapperInterface: '@App\Mapper\RssMapper'
 
     # add more service definitions when explicit configuration is needed
     # please note that last definitions always *replace* previous ones

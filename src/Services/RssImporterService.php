@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Service;
+namespace App\Services;
 
 use Doctrine\ORM\EntityManagerInterface;
 use App\Entity\News;

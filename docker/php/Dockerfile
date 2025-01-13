@@ -30,9 +30,6 @@ WORKDIR /var/www/project
 # Копирование файлов проекта
 COPY . /var/www/project
 
-# Установка зависимостей проекта через Composer
-RUN composer install --no-dev --optimize-autoloader
-
 # Настройка переменных окружения
 ENV TIME_ZONE Europe/Moscow
 ENV PHP_ENABLE_XDEBUG 1

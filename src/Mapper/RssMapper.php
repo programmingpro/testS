@@ -1,7 +1,6 @@
 <?php
 
 namespace App\Mapper;
-namespace App\Service;
 
 use App\Dto\RssItemDto;
 use App\Interfaces\RssMapperInterface;

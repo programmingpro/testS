@@ -2,7 +2,7 @@
 
 namespace App\Dto;
 
-class listAnswerDto
+class listAnsDto
 {
     public function __construct(
         public int $page,

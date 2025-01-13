@@ -4,7 +4,7 @@ namespace App\Controller\API;
 
 use App\Dto\EditDto;
 use App\Dto\ItemAnswerDto;
-use App\Dto\ListAnswerDto;
+use App\Dto\listAnsDto;
 use App\Dto\ListRequestDto;
 use App\Entity\Category;
 use App\Entity\News;
@@ -113,7 +113,7 @@ class NewsApiController extends AbstractController
             );
         }, $newsList);
 
-        $responseDto = new ListAnswerDto(
+        $responseDto = new listAnsDto(
             page: $dto->getPage(),
             limit: $dto->getLimit(),
             total: $total,
