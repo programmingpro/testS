@@ -1,0 +1,13 @@
+# config/packages/nelmio_api_doc.yaml
+nelmio_api_doc:
+    areas:
+        path_patterns:
+            - ^/api(?!/doc$)
+    documentation:
+        info:
+            title: News API
+            description: API для управления новостями
+            version: 1.0.0
+        servers:
+            - url: http://localhost:5000
+              description: Локальный сервер

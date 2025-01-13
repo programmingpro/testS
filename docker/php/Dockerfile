@@ -26,7 +26,12 @@ COPY ./docker/php/xdebug.ini /usr/local/etc/php/conf.d/xdebug.ini
 
 # Настройка рабочей директории
 WORKDIR /var/www/project
+
+# Копирование файлов проекта
 COPY . /var/www/project
+
+# Установка зависимостей проекта через Composer
+RUN composer install --no-dev --optimize-autoloader
 
 # Настройка переменных окружения
 ENV TIME_ZONE Europe/Moscow

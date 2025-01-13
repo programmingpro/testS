@@ -72,7 +72,6 @@ class RssImporterService
 
         $category = $catRep->findOneBy(['name' => $rssItemDto->category]);
 
-
         if (!$category) {
             $persistedEntities = $this->entityManager->getUnitOfWork()->getScheduledEntityInsertions();
             foreach ($persistedEntities as $entity) {
