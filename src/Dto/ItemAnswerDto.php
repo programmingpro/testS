@@ -2,43 +2,18 @@
 
 namespace App\Dto;
 
-use OpenApi\Attributes as OA;
 
-#[OA\Schema(
-    schema: 'ItemAnswerDto',
-    title: 'ItemAnswerDto',
-    description: 'Ответ с данными новости'
-)]
 class ItemAnswerDto
 {
-    #[OA\Property(type: 'integer', example: 1)]
     public int $id;
 
-    #[OA\Property(type: 'string', example: 'Новый заголовок')]
     public string $title;
 
-    #[OA\Property(type: 'string', example: 'https://example.com/new-link')]
     public string $link;
 
-    #[OA\Property(type: 'string', format: 'date', example: '2023-10-15')]
     public string $pubDate;
 
-    #[OA\Property(
-        properties: [
-            new OA\Property(property: 'id', type: 'integer', example: 3),
-            new OA\Property(property: 'name', type: 'string', example: 'Источник 3'),
-            new OA\Property(property: 'url', type: 'string', example: 'https://example.com/source3'),
-        ],
-        type: 'object'
-    )]
     public array $source;
-    #[OA\Property(
-        properties: [
-            new OA\Property(property: 'id', type: 'integer', example: 2),
-            new OA\Property(property: 'name', type: 'string', example: 'Категория 2'),
-        ],
-        type: 'object'
-    )]
     public array $category;
 
     public function __construct(
