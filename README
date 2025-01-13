@@ -1,3 +1,7 @@
+Копируем энвы
+
+cp env.dev. env.
+
 инициализация проекта:
 
 sudo docker compose up -d --build
