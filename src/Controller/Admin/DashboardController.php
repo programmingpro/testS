@@ -15,7 +15,7 @@ use Symfony\Component\Routing\Attribute\Route;
 class DashboardController extends AbstractDashboardController
 {
     public function __construct(
-        private SourceRepository $sourceRepository // Используем новый синтаксис конструктора
+        private SourceRepository $sourceRepository
     ) {}
 
     #[Route('/admin', name: 'admin')]
