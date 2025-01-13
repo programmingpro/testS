@@ -43,14 +43,14 @@ class NewsApiController extends AbstractController
                 description: 'Начальная дата периода (формат Y-m-d)',
                 in: 'query',
                 required: true,
-                schema: new OA\Schema(type: 'string', format: 'date', example: '2023-01-01')
+                schema: new OA\Schema(type: 'string', format: 'date', example: '2025-01-01')
             ),
             new OA\Parameter(
                 name: 'end_date',
                 description: 'Конечная дата периода (формат Y-m-d)',
                 in: 'query',
                 required: true,
-                schema: new OA\Schema(type: 'string', format: 'date', example: '2023-12-31')
+                schema: new OA\Schema(type: 'string', format: 'date', example: '2025-12-31')
             ),
             new OA\Parameter(
                 name: 'page',

@@ -32,7 +32,7 @@ class NewsRepository extends ServiceEntityRepository
             ->andWhere('n.pubDate <= :endDate')
             ->setParameter('startDate', $startDate)
             ->setParameter('endDate', $endDate)
-            ->orderBy('n.pubDate', 'DESC');
+            ->orderBy('n.id', 'DESC');
 
         $queryBuilder
             ->setFirstResult(($page - 1) * $limit)
